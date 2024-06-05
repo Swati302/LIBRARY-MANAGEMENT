@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Transactions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            border-bottom: #0779e4 3px solid;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        header a:hover {
+            background-color: #575757;
+        }
+        .main {
+            padding: 30px;
+        }
+        .main h1 {
+            color: #333;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-container form div {
+            flex: 1;
+        }
+        .form-container form div label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-container form div input, .form-container form div select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container form div input[type="submit"] {
+            background: #0779e4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container form div input[type="submit"]:hover {
+            background: #055a8c;
+        }
+        .table-container {
+            margin-top: 30px;
+        }
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container table, .table-container th, .table-container td {
+            border: 1px solid #ddd;
+        }
+        .table-container th, .table-container td {
+            padding: 12px;
+            text-align: left;
+        }
+        .table-container th {
+            background-color: #f4f4f9;
+            color: #333;
+        }
+    </style>
+    <script>
+        function redirectToPage(event) {
+            event.preventDefault();
+            const transactionType = document.getElementById('transactionType').value;
+
+            switch(transactionType) {
+                case 'borrow':
+                    window.location.href = 'borrow.html';
+                    break;
+                case 'return':
+                    window.location.href = 'return.html';
+                    break;
+                case 'issue':
+                    window.location.href = 'issue_book.html';
+                    break;
+                case 'availability':
+                    window.location.href = 'availability.html';
+                    break;
+                case 'fine':
+                    window.location.href = 'pay_fine.html';
+                    break;
+                default:
+                    alert('Invalid transaction type selected');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="maintenance_menu.html">Maintenance</a>
+            <a href="report_menu.html">Reports</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <h1>Transactions</h1>
+
+            <div class="form-container">
+                <h2>Manage Transactions</h2>
+                <form onsubmit="redirectToPage(event)">
+                    <div>
+                        <label for="transactionType">Transaction Type</label>
+                        <select id="transactionType" name="transactionType">
+                            <option value="borrow">Borrow</option>
+                            <option value="return">Return</option>
+                            <option value="issue">Issue Book</option>
+                            <option value="availability">Check Book Availability</option>
+                            <option value="fine">Pay Fine</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="memberID">Member ID</label>
+                        <input type="text" id="memberID" name="memberID" required>
+                    </div>
+                    <div>
+                        <label for="bookID">Book ID</label>
+                        <input type="text" id="bookID" name="bookID" required>
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <h2>Transaction History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Transaction Type</th>
+                            <th>Member ID</th>
+                            <th>Book ID</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample Data -->
+                        <tr>
+                            <td>1</td>
+                            <td>Borrow</td>
+                            <td>M001</td>
+                            <td>B001</td>
+                            <td>2024-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Return</td>
+                            <td>M002</td>
+                            <td>B002</td>
+                            <td>2024-01-02</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Issue Book</td>
+                            <td>M003</td>
+                            <td>B003</td>
+                            <td>2024-01-03</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Check Book Availability</td>
+                            <td>M004</td>
+                            <td>B004</td>
+                            <td>2024-01-04</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Pay Fine</td>
+                            <td>M005</td>
+                            <td>B005</td>
+                            <td>2024-01-05</td>
+                        </tr>
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

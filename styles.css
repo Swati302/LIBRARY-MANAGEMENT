@@ -1,0 +1,291 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.icon i {
+    font-size: 50px;
+    color: #007BFF;
+}
+
+.icon p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #007BFF;
+}
+
+/* Login Container */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+.login-section {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+}
+
+form button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+/* styles.css */
+/* styles.css */
+
+/* Reset default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  /* Navigation styles */
+  nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+  nav ul li a:hover {
+    background-color: #555; /* Change background color on hover */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Main section styles */
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.options {
+    margin-bottom: 30px;
+}
+
+.options h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    font-size: 18px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.options li:before {
+    content: "\25A0"; /* Unicode for a solid square */
+    margin-right: 10px;
+    color: #007bff; /* Color of the square */
+}
+
+.options li:hover {
+    color: #0056b3; /* Change color on hover */
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-weight: bold; /* Make heading bold */
+    font-size: 36px; /* Increase font size */
+}
+
+.options {
+    margin-bottom: 30px;
+}
+
+.options h2 {
+    font-size: 28px; /* Increase font size */
+    margin-bottom: 10px;
+    color: #007bff;
+    font-weight: bold; /* Make heading bold */
+}
+
+.options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    font-size: 20px; /* Increase font size */
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.options li:before {
+    content: "\25A0"; /* Unicode for a solid square */
+    margin-right: 10px;
+    color: #007bff; /* Color of the square */
+}
+
+.options li:hover {
+    color: #0056b3; /* Change color on hover */
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#bookDetails {
+    margin-top: 20px;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-style: italic;
+    color: #333;
+}

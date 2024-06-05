@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Management - Library Management System</title>
+    <style>
+        /* CSS styles */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Author Management</h1>
+    </header>
+    <main>
+        <button id="addAuthorButton">Add Author</button>
+        <table id="authorTable">
+            <thead>
+                <tr>
+                    <th>Author ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Author data will be populated here dynamically -->
+            </tbody>
+        </table>
+    </main>
+    <script>
+        // Sample author data
+        var authors = [
+            { id: 1, name: 'J.K. Rowling', email: 'jkrowling@example.com' },
+            { id: 2, name: 'Stephen King', email: 'stephenking@example.com' },
+            { id: 3, name: 'Agatha Christie', email: 'agathachristie@example.com' }
+        ];
+
+        // Function to render authors into the table
+        function renderAuthors() {
+            var tableBody = document.querySelector('#authorTable tbody');
+            tableBody.innerHTML = ''; // Clear previous content
+            authors.forEach(function(author) {
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${author.id}</td>
+                    <td>${author.name}</td>
+                    <td>${author.email}</td>
+                    <td><button onclick="editAuthor(${author.id})">Edit</button> <button onclick="deleteAuthor(${author.id})">Delete</button></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Function to add a new author
+        function addAuthor() {
+            var name = prompt('Enter author name:');
+            var email = prompt('Enter author email:');
+            if (name && email) {
+                var newAuthor = {
+                    id: authors.length + 1,
+                    name: name,
+                    email: email
+                };
+                authors.push(newAuthor);
+                renderAuthors();
+            } else {
+                alert('Name and email are required!');
+            }
+        }
+
+        // Function to edit an author
+        function editAuthor(authorId) {
+            var author = authors.find(function(author) {
+                return author.id === authorId;
+            });
+            var newName = prompt('Enter new name for ' + author.name + ':', author.name);
+            var newEmail = prompt('Enter new email for ' + author.email + ':', author.email);
+            if (newName && newEmail) {
+                author.name = newName;
+                author.email = newEmail;
+                renderAuthors();
+            } else {
+                alert('Name and email are required!');
+            }
+        }
+
+        // Function to delete an author
+        function deleteAuthor(authorId) {
+            var confirmation = confirm('Are you sure you want to delete this author?');
+            if (confirmation) {
+                authors = authors.filter(function(author) {
+                    return author.id !== authorId;
+                });
+                renderAuthors();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render initial author data
+            renderAuthors();
+
+            // Add event listener for add author button
+            var addAuthorButton = document.getElementById('addAuthorButton');
+            if (addAuthorButton) {
+                addAuthorButton.addEventListener('click', addAuthor);
+            }
+        });
+    </script>
+</body>
+</html>

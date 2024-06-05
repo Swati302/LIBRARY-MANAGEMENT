@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* CSS for styling icons */
+        .icon-link {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px; /* Added space on left and right */
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-link:hover {
+            transform: scale(1.2);
+        }
+
+        .icon-link i {
+            font-size: 36px;
+            margin-right: 5px; /* Reduced margin between icon and text */
+        }
+
+        .icon-link span {
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: middle; /* Align text vertically */
+        }
+
+        .main-section {
+            text-align: center; /* Center-align the icons */
+            margin-top: 50px; /* Add margin from the top */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="admin_home.html">Home</a></li>
+                <li><a href="add_book.html">Add Book</a></li>
+                <li><a href="update_book.html">Update Book</a></li>
+                <li><a href="user_management.html">Manage Users</a></li>
+                <li><a href="membership_management.html">Manage Memberships</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-section"> <!-- Added class for styling -->
+        <section>
+            <h2>Welcome, Admin!</h2>
+            <p>Use the navigation menu to manage the library system.</p>
+            <!-- Icon for Maintenance Menu -->
+            <a href="maintenance_menu.html" class="icon-link">
+                <i class="fas fa-tools"></i>
+                <span>Maintenance Menu</span>
+            </a>
+            <!-- Icon for Transactions -->
+            <a href="transactions.html" class="icon-link">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Transactions</span>
+            </a>
+            <!-- Icon for Report Menu -->
+            <a href="report_menu.html" class="icon-link">
+                <i class="fas fa-chart-bar"></i>
+                <span>Report Menu</span>
+            </a>
+        </section>
+    </main>
+</body>
+</html>

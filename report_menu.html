@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Report Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        ul li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main {
+            padding: 30px;
+            text-align: center;
+        }
+        .main h1 {
+            color: #333;
+        }
+        .report-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .report-menu a {
+            background: #0779e4;
+            color: #fff;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .report-menu a:hover {
+            background: #055a8c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Library Management System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report_menu.html">Reports</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <h1>Report Menu</h1>
+            <div class="report-menu">
+                <a href="daily_borrowed_books.html">Daily Borrowed Books</a>
+                <a href="weekly_borrowed_books.html">Weekly Borrowed Books</a>
+                <a href="monthly_borrowed_books.html">Monthly Borrowed Books</a>
+                <a href="overdue_books.html">Overdue Books</a>
+                <a href="most_borrowed_books.html">Most Borrowed Books</a>
+                <a href="member_activity.html">Member Activity</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

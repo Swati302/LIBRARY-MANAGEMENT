@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* CSS for centering icons */
+        .centered-icons {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .icon-link {
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-link:hover {
+            transform: scale(1.2);
+        }
+
+        .icon-link i {
+            font-size: 36px;
+            margin-right: 10px;
+        }
+
+        .icon-link span {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="user_home.html">Home</a></li>
+                <li><a href="book_issue.html">Issue Book</a></li>
+                <li><a href="book_return.html">Return Book</a></li>
+                <li><a href="search_books.html">Search Books</a></li>
+                <li><a href="pay_fine.html">Pay Fine</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome, User!</h2>
+            <p>Use the navigation menu to explore and manage your library activities.</p>
+            <div class="centered-icons">
+                <!-- Icon for Transactions -->
+                <a href="transactions.html" class="icon-link">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Transactions</span>
+                </a>
+                <!-- Icon for Report Menu -->
+                <a href="report_menu.html" class="icon-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Report Menu</span>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

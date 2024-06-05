@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            border-bottom: #0779e4 3px solid;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        header a:hover {
+            background-color: #575757;
+        }
+        .main {
+            padding: 30px;
+        }
+        .main h1 {
+            color: #333;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container form div {
+            margin-bottom: 15px;
+        }
+        .form-container form div label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-container form div input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        border-radius: 5px;
+        }
+        .form-container form div input[type="submit"] {
+            background: #0779e4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container form div input[type="submit"]:hover {
+            background: #055a8c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report_menu.html">Reports</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <h1>Borrow Book</h1>
+
+            <div class="form-container">
+                <form action="#" method="post">
+                    <div>
+                        <label for="memberID">Member ID</label>
+                        <input type="text" id="memberID" name="memberID" required>
+                    </div>
+                    <div>
+                        <label for="bookID">Book ID</label>
+                        <select id="bookID" name="bookID" required>
+                            <option value="">Select Book</option>
+                            <option value="B001">Book 1</option>
+                            <option value="B002">Book 2</option>
+                            <option value="B003">Book 3</option>
+                            <!-- Add more book options as needed -->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="issueDate">Issue Date</label>
+                        <input type="date" id="issueDate" name="issueDate" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Borrow Book">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

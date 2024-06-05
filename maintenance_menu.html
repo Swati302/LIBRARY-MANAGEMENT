@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance - Library Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #1e1e1e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .main {
+            padding: 30px;
+            text-align: center;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #0779e4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #055a8c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Maintenance - Library Management System</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <div class="form-container">
+                <h2>Add New Book</h2>
+                <form id="addBookForm">
+                    <label for="bookTitle">Book Title:</label>
+                    <input type="text" id="bookTitle" name="bookTitle" required>
+                    
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                    
+                    <label for="category">Category:</label>
+                    <select id="category" name="category">
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="sci-fi">Science Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                    </select>
+                    
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('addBookForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Retrieve form data
+            var bookTitle = document.getElementById('bookTitle').value;
+            var author = document.getElementById('author').value;
+            var category = document.getElementById('category').value;
+
+            // Simulate adding the book (replace with actual backend logic)
+            setTimeout(function() {
+                // Display confirmation message
+                alert('Book "' + bookTitle + '" by ' + author + ' added successfully!');
+                
+                // Reset form fields
+                document.getElementById('bookTitle').value = '';
+                document.getElementById('author').value = '';
+                document.getElementById('category').value = 'fiction'; // Reset category to default value
+            }, 1000); // Simulate a delay of 1 second
+        });
+    </script>
+</body>
+</html>

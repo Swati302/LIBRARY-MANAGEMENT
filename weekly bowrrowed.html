@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Borrowed Books - Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Library Management System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report_menu.html">Reports</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <h1>Weekly Borrowed Books</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Book ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Borrower</th>
+                            <th>Borrow Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>201</td>
+                            <td>Pride and Prejudice</td>
+                            <td>Jane Austen</td>
+                            <td>Emily Johnson</td>
+                            <td>2024-06-01</td>
+                        </tr>
+                        <tr>
+                            <td>202</td>
+                            <td>Moby Dick</td>
+                            <td>Herman Melville</td>
+                            <td>Michael Brown</td>
+                            <td>2024-06-02</td>
+                        </tr>
+                        <tr>
+                            <td>203</td>
+                            <td>War and Peace</td>
+                            <td>Leo Tolstoy</td>
+                            <td>Linda Davis</td>
+                            <td>2024-06-03</td>
+                        </tr>
+                        <tr>
+                            <td>204</td>
+                            <td>The Odyssey</td>
+                            <td>Homer</td>
+                            <td>Chris Wilson</td>
+                            <td>2024-06-04</td>
+                        </tr>
+                        <tr>
+                            <td>205</td>
+                            <td>Great Expectations</td>
+                            <td>Charles Dickens</td>
+                            <td>Sarah Martinez</td>
+                            <td>2024-06-05</td>
+                        </tr>
+                        <tr>
+                            <td>206</td>
+                            <td>Don Quixote</td>
+                            <td>Miguel de Cervantes</td>
+                            <td>David Garcia</td>
+                            <td>2024-06-06</td>
+                        </tr>
+                        <tr>
+                            <td>207</td>
+                            <td>The Divine Comedy</td>
+                            <td>Dante Alighieri</td>
+                            <td>Amy Rodriguez</td>
+                            <td>2024-06-07</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

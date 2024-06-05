@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Management - Library Management System</title>
+    <style>
+        /* CSS styles */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Membership Management</h1>
+    </header>
+    <main>
+        <button id="addMembershipButton">Add Membership</button>
+        <table id="membershipTable">
+            <thead>
+                <tr>
+                    <th>Membership ID</th>
+                    <th>Name</th>
+                    <th>Validity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Membership data will be populated here dynamically -->
+            </tbody>
+        </table>
+    </main>
+    <script>
+        // Sample membership data
+        var memberships = [
+            { id: 1, name: 'Standard', validity: '1 year' },
+            { id: 2, name: 'Premium', validity: '2 years' },
+            { id: 3, name: 'Student', validity: '6 months' }
+        ];
+
+        // Function to render memberships into the table
+        function renderMemberships() {
+            var tableBody = document.querySelector('#membershipTable tbody');
+            tableBody.innerHTML = ''; // Clear previous content
+            memberships.forEach(function(membership) {
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${membership.id}</td>
+                    <td>${membership.name}</td>
+                    <td>${membership.validity}</td>
+                    <td>
+                        <a href="edit_membership.html?id=${membership.id}">Edit</a> | 
+                        <a href="#" onclick="deleteMembership(${membership.id})">Delete</a>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Function to add a new membership
+        function addMembership() {
+            var name = prompt('Enter membership name:');
+            var validity = prompt('Enter membership validity:');
+            if (name && validity) {
+                var newMembership = {
+                    id: memberships.length + 1,
+                    name: name,
+                    validity: validity
+                };
+                memberships.push(newMembership);
+                renderMemberships();
+            } else {
+                alert('Name and validity are required!');
+            }
+        }
+
+        // Function to delete a membership
+        function deleteMembership(membershipId) {
+            var confirmation = confirm('Are you sure you want to delete this membership?');
+            if (confirmation) {
+                memberships = memberships.filter(function(membership) {
+                    return membership.id !== membershipId;
+                });
+                renderMemberships();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render initial membership data
+            renderMemberships();
+
+            // Add event listener for add membership button
+            var addMembershipButton = document.getElementById('addMembershipButton');
+            if (addMembershipButton) {
+                addMembershipButton.addEventListener('click', addMembership);
+            }
+        });
+    </script>
+</body>
+</html>

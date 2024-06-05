@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book - Library Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #1e1e1e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        form input[type="text"],
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #0779e4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #055a8c;
+        }
+        .confirmation {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .back-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Add Book</h1>
+        <!-- Add your navigation links -->
+    </header>
+    <main>
+        <section>
+            <form id="addBookForm">
+                <label for="bookTitle">Book Title:</label>
+                <input type="text" id="bookTitle" name="bookTitle" required>
+                
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+                
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="sci-fi">Science Fiction</option>
+                    <option value="fantasy">Fantasy</option>
+                </select>
+                
+                <button type="submit">Add Book</button>
+            </form>
+            <div id="confirmation" class="confirmation" style="display: none;"></div>
+            <button class="back-button" onclick="window.history.back()">Back</button>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var addBookForm = document.getElementById('addBookForm');
+            if (addBookForm) {
+                addBookForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    // Retrieve form data
+                    var bookTitle = document.getElementById('bookTitle').value;
+                    var author = document.getElementById('author').value;
+                    var category = document.getElementById('category').value;
+
+                    // Simulate backend operation (replace with actual logic)
+                    setTimeout(function() {
+                        // Display confirmation message
+                        var confirmation = 'Book "' + bookTitle + '" by ' + author + ' added successfully!';
+                        document.getElementById('confirmation').innerText = confirmation;
+                        document.getElementById('confirmation').style.display = 'block';
+                    }, 1000); // Simulate a delay of 1 second
+                });
+            }
+        });
+    </script>
+</body>
+</html>
